@@ -20,6 +20,7 @@
 		7715B1D02850A18C00DD330B /* TrainCampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1CF2850A18C00DD330B /* TrainCampUITestsLaunchTests.swift */; };
 		7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1DC2850A6DA00DD330B /* LoginViewController.swift */; };
 		775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775F12FC285363B4006F1E22 /* GoogleService-Info.plist */; };
+		CA2B8F732853760A00164286 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B8F722853760A00164286 /* RegisterViewController.swift */; };
 		DF722C190288CB6823E40552 /* Pods_TrainCamp_TrainCampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318629AA0A1564ACF197C27B /* Pods_TrainCamp_TrainCampUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		7715B1DC2850A6DA00DD330B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		775F12FC285363B4006F1E22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8BA058D7C7380F583E68E26 /* Pods-TrainCamp-TrainCampUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrainCamp-TrainCampUITests/Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2B8F722853760A00164286 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F574CC297BCB7C092DDABA44 /* Pods-TrainCampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCampTests.release.xcconfig"; path = "Target Support Files/Pods-TrainCampTests/Pods-TrainCampTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				7715B1B72850A18C00DD330B /* LaunchScreen.storyboard */,
 				7715B1BA2850A18C00DD330B /* Info.plist */,
 				7715B1DC2850A6DA00DD330B /* LoginViewController.swift */,
+				CA2B8F722853760A00164286 /* RegisterViewController.swift */,
 			);
 			path = TrainCamp;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */,
+				CA2B8F732853760A00164286 /* RegisterViewController.swift in Sources */,
 				7715B1B12850A18C00DD330B /* ViewController.swift in Sources */,
 				7715B1AD2850A18C00DD330B /* AppDelegate.swift in Sources */,
 				7715B1AF2850A18C00DD330B /* SceneDelegate.swift in Sources */,
