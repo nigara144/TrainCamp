@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  TrainCamp
-//
 //  Created by user216966 on 6/8/22.
-//
 
 import UIKit
 
