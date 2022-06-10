@@ -19,7 +19,7 @@
 		7715B1CE2850A18C00DD330B /* TrainCampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1CD2850A18C00DD330B /* TrainCampUITests.swift */; };
 		7715B1D02850A18C00DD330B /* TrainCampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1CF2850A18C00DD330B /* TrainCampUITestsLaunchTests.swift */; };
 		7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1DC2850A6DA00DD330B /* LoginViewController.swift */; };
-		CA2B8F7128535F7600164286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA2B8F7028535F7600164286 /* GoogleService-Info.plist */; };
+		775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775F12FC285363B4006F1E22 /* GoogleService-Info.plist */; };
 		DF722C190288CB6823E40552 /* Pods_TrainCamp_TrainCampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318629AA0A1564ACF197C27B /* Pods_TrainCamp_TrainCampUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +62,8 @@
 		7715B1CD2850A18C00DD330B /* TrainCampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCampUITests.swift; sourceTree = "<group>"; };
 		7715B1CF2850A18C00DD330B /* TrainCampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCampUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7715B1DC2850A6DA00DD330B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		775F12FC285363B4006F1E22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8BA058D7C7380F583E68E26 /* Pods-TrainCamp-TrainCampUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrainCamp-TrainCampUITests/Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CA2B8F7028535F7600164286 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F574CC297BCB7C092DDABA44 /* Pods-TrainCampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCampTests.release.xcconfig"; path = "Target Support Files/Pods-TrainCampTests/Pods-TrainCampTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +143,7 @@
 		7715B1AB2850A18C00DD330B /* TrainCamp */ = {
 			isa = PBXGroup;
 			children = (
-				CA2B8F7028535F7600164286 /* GoogleService-Info.plist */,
+				775F12FC285363B4006F1E22 /* GoogleService-Info.plist */,
 				7715B1AC2850A18C00DD330B /* AppDelegate.swift */,
 				7715B1AE2850A18C00DD330B /* SceneDelegate.swift */,
 				7715B1B02850A18C00DD330B /* ViewController.swift */,
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7715B1B92850A18C00DD330B /* LaunchScreen.storyboard in Resources */,
-				CA2B8F7128535F7600164286 /* GoogleService-Info.plist in Resources */,
+				775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */,
 				7715B1B62850A18C00DD330B /* Assets.xcassets in Resources */,
 				7715B1B42850A18C00DD330B /* Main.storyboard in Resources */,
 			);
