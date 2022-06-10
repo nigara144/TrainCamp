@@ -1,0 +1,6 @@
+framework module Pods_TrainCamp_TrainCampUITests {
+  umbrella header "Pods-TrainCamp-TrainCampUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
