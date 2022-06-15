@@ -6,10 +6,8 @@ target 'TrainCamp' do
   use_frameworks!
 
   # Pods for TrainCamp
-  pod 'FirebaseCore'
-  pod 'FirebaseUI'
-  pod 'FirebaseAuth'
-  pod 'FirebaseFirestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'TrainCampTests' do
     inherit! :search_paths

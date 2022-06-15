@@ -35,16 +35,16 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapOnLoginButton(_ sender: AnyObject){
         let email = emailAddressField.text!
-                let password = passwordField.text!
+        let password = passwordField.text!
 
-                Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-                    guard let strongSelf = self else { return }
-                    if(error != nil) {
-                        print("Login - FAILED")
-                        return
-                    }
-                    print("Login - SUCCESS")
-                }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+          guard let strongSelf = self else { return }
+            if(error != nil) {
+                print("Login - FAILED")
+                return
+            }
+            print("Login - SUCCESS")
+        }
     }
     
     @IBAction func createAccount(_ sender: Any) {
