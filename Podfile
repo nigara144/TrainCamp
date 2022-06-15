@@ -7,7 +7,7 @@ target 'TrainCamp' do
 
   # Pods for TrainCamp
   pod 'FirebaseCore'
-  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
 
