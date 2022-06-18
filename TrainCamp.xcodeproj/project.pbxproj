@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04BF1B9D285DD2390049333A /* SetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1B9C285DD2380049333A /* SetsViewController.swift */; };
+		04BF1B9F285E07B20049333A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1B9E285E07B20049333A /* PlanViewController.swift */; };
+		04BF1BA1285E15CA0049333A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */; };
+		04BF1BA3285E19B50049333A /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1BA2285E19B50049333A /* DoneViewController.swift */; };
+		04BF1BA5285E1DA20049333A /* CustomUI in Resources */ = {isa = PBXBuildFile; fileRef = 04BF1BA4285E1DA20049333A /* CustomUI */; };
 		0B43ECE908E6C7066E402EFE /* Pods_TrainCampTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E78ACE1E6E7372A029F578E /* Pods_TrainCampTests.framework */; };
 		310D466E5D287C09480EAE2B /* Pods_TrainCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4901FCD1D8EA0A17E194F2CE /* Pods_TrainCamp.framework */; };
 		7715B1AD2850A18C00DD330B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1AC2850A18C00DD330B /* AppDelegate.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BF1B9C285DD2380049333A /* SetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewController.swift; sourceTree = "<group>"; };
+		04BF1B9E285E07B20049333A /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		04BF1BA2285E19B50049333A /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		04BF1BA4285E1DA20049333A /* CustomUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CustomUI; sourceTree = "<group>"; };
 		11277E67E29D85D0DE9C0125 /* Pods-TrainCamp-TrainCampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCamp-TrainCampUITests.release.xcconfig"; path = "Target Support Files/Pods-TrainCamp-TrainCampUITests/Pods-TrainCamp-TrainCampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1E78ACE1E6E7372A029F578E /* Pods_TrainCampTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainCampTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BE7122A555E78AD28BCDA4 /* Pods-TrainCampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCampTests.debug.xcconfig"; path = "Target Support Files/Pods-TrainCampTests/Pods-TrainCampTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 		7715B1AB2850A18C00DD330B /* TrainCamp */ = {
 			isa = PBXGroup;
 			children = (
+				04BF1BA4285E1DA20049333A /* CustomUI */,
 				775F12FC285363B4006F1E22 /* GoogleService-Info.plist */,
 				7715B1AC2850A18C00DD330B /* AppDelegate.swift */,
 				7715B1AE2850A18C00DD330B /* SceneDelegate.swift */,
@@ -155,6 +166,10 @@
 				7715B1BA2850A18C00DD330B /* Info.plist */,
 				7715B1DC2850A6DA00DD330B /* LoginViewController.swift */,
 				CA2B8F722853760A00164286 /* RegisterViewController.swift */,
+				04BF1B9C285DD2380049333A /* SetsViewController.swift */,
+				04BF1B9E285E07B20049333A /* PlanViewController.swift */,
+				04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */,
+				04BF1BA2285E19B50049333A /* DoneViewController.swift */,
 			);
 			path = TrainCamp;
 			sourceTree = "<group>";
@@ -288,6 +303,7 @@
 				7715B1B92850A18C00DD330B /* LaunchScreen.storyboard in Resources */,
 				775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */,
 				7715B1B62850A18C00DD330B /* Assets.xcassets in Resources */,
+				04BF1BA5285E1DA20049333A /* CustomUI in Resources */,
 				7715B1B42850A18C00DD330B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,10 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BF1BA1285E15CA0049333A /* WorkoutViewController.swift in Sources */,
 				7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */,
+				04BF1B9D285DD2390049333A /* SetsViewController.swift in Sources */,
 				CA2B8F732853760A00164286 /* RegisterViewController.swift in Sources */,
+				04BF1B9F285E07B20049333A /* PlanViewController.swift in Sources */,
 				7715B1B12850A18C00DD330B /* ViewController.swift in Sources */,
 				7715B1AD2850A18C00DD330B /* AppDelegate.swift in Sources */,
+				04BF1BA3285E19B50049333A /* DoneViewController.swift in Sources */,
 				7715B1AF2850A18C00DD330B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

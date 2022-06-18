@@ -15,14 +15,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
-    
     @IBOutlet weak var loginBtn: UIButton!
-    
     @IBOutlet weak var signUp: UIButton!
     
     
+    func navigateToSetsView(){
+        print("HERE!!")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let setsViewController = storyBoard.instantiateViewController(withIdentifier: "SetsViewController") as! SetsViewController
+        self.present(setsViewController, animated:true, completion:nil)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        Auth.auth().addStateDidChangeListener() { auth, user in
+                if user != nil {
+                    self.performSegue(withIdentifier: "UserLoggedIn", sender: nil)
+                }
+            }
     }
     
     @IBAction func emailChanged(_ sender: Any) {
@@ -105,6 +115,7 @@ class LoginViewController: UIViewController {
                 return
             }
             print("Login - SUCCESS")
+            self!.navigateToSetsView()
         }
     }
     
@@ -118,8 +129,11 @@ class LoginViewController: UIViewController {
                 return
             }
             print("User created!")
+            self.navigateToSetsView()
         }
     
     }
+    
+    
 }
 
