@@ -239,10 +239,6 @@ class Serializer {
 
   bool IsLocalDocumentKey(absl::string_view path) const;
 
-  const model::DatabaseId& database_id() const {
-    return database_id_;
-  }
-
  private:
   model::MutableDocument DecodeFoundDocument(
       util::ReadContext* context,

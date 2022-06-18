@@ -8,35 +8,96 @@
 import Foundation
 import UIKit
 import Firebase
-//import FirebaseUI
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailAddressField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-//    var handle: AuthStateDidChangeListenerHandle?
+    @IBOutlet weak var emailError: UILabel!
+    @IBOutlet weak var passwordError: UILabel!
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    @IBOutlet weak var signUp: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-       
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        handle = Auth.auth().addStateDidChangeListener { auth, user in}
-//
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        Auth.auth().removeStateDidChangeListener(handle!)
-//    }
+    @IBAction func emailChanged(_ sender: Any) {
+        if let email = emailAddressField.text
+                {
+                    if let errorMessage = invalidEmail(email)
+                    {
+                        emailError.text = errorMessage
+                        emailError.isHidden = false
+                    }
+                    else
+                    {
+                        emailError.isHidden = true
+                    }
+                }
+                
+                checkForValidForm()
+    }
     
+    func invalidEmail(_ value: String) -> String?
+        {
+            let reqularExpression = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let predicate = NSPredicate(format: "SELF MATCHES %@", reqularExpression)
+            if !predicate.evaluate(with: value)
+            {
+                return "Invalid Email Address"
+            }
+            
+            return nil
+        }
+    
+    @IBAction func passwordChanged(_ sender: Any) {
+        if let password = passwordField.text
+                {
+                    if let errorMessage = invalidPassword(password)
+                    {
+                        passwordError.text = errorMessage
+                        passwordError.isHidden = false
+                    }
+                    else
+                    {
+                        passwordError.isHidden = true
+                    }
+                }
+                
+                checkForValidForm()
+    }
+    
+    func invalidPassword(_ value: String) -> String?
+    {
+        if value.count < 6
+        {
+            return "Password must be at least 6 characters"
+        }
+        return nil
+    }
+    
+    func checkForValidForm()
+        {
+            if emailError.isHidden && passwordError.isHidden
+            {
+                loginBtn.isEnabled = true
+                signUp.isEnabled = true;
+            }
+            else
+            {
+                loginBtn.isEnabled = false
+                signUp.isEnabled = false;
+            }
+        }
     
     @IBAction func didTapOnLoginButton(_ sender: AnyObject){
         let email = emailAddressField.text!
         let password = passwordField.text!
-
+        
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
           guard let strongSelf = self else { return }
             if(error != nil) {
@@ -47,29 +108,18 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
     @IBAction func createAccount(_ sender: Any) {
         let email = emailAddressField.text!
         let password = passwordField.text!
-//        let name = nameField.text!
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if(error != nil) {
                 print("User create - FAILED")
-//                print(error)
                 return
             }
             print("User created!")
         }
     
     }
-    
-//    @IBAction func loginButtonTapped(_ sender: UIButton) {
-//        guard let authUI = FUIAuth.defaultAuthUI()
-//            else { return }
-//
-//        authUI.delegate = self
-//
-//        let authViewController = authUI.authViewController()
-//        present(authViewController, animated: true)
-//    }
 }
 
