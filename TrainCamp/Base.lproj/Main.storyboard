@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="TrainCamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="TrainCamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,23 +169,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-uc-n0a">
-                                <rect key="frame" x="20.000000000000004" y="54" width="50.333333333333343" height="40"/>
+                                <rect key="frame" x="20" y="54" width="63" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UWX-gE-Dkp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="note.text" catalog="system" title=" "/>
+                                <buttonConfiguration key="configuration" style="plain" image="history1" title=" "/>
                                 <connections>
                                     <segue destination="gBY-2c-tb6" kind="presentation" identifier="HistoryView" modalPresentationStyle="fullScreen" id="xA3-6O-m3R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KA-JO-pPS">
-                                <rect key="frame" x="168.33333333333334" y="54" width="53.666666666666657" height="40"/>
+                                <rect key="frame" x="163.66666666666666" y="54" width="63" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aXE-Gl-JaP"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="tablecells" catalog="system" title=" "/>
+                                <buttonConfiguration key="configuration" style="plain" image="rank1" title=" "/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTZ-Co-NtK">
                                 <rect key="frame" x="330" y="54" width="40" height="40"/>
@@ -193,8 +193,16 @@
                                     <constraint firstAttribute="height" constant="40" id="Q4T-2z-T2F"/>
                                     <constraint firstAttribute="width" constant="40" id="vGx-7b-414"/>
                                 </constraints>
+                                <color key="tintColor" red="0.13333333333333333" green="0.54509803921568623" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" " image="fitness (1)"/>
+                                <state key="normal" title=" " image="arrowshape.turn.up.right" catalog="system">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapOnLogoutBtn:" destination="tqu-d7-XKg" eventType="touchUpInside" id="Ocg-yN-0IO"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginViewController" modalPresentationStyle="fullScreen" id="Cv1-5l-G2t"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-UN-Xjh">
                                 <rect key="frame" x="20" y="144" width="350" height="300"/>
@@ -298,7 +306,7 @@ choose exercises from each set:</string>
         <!--History View Controller-->
         <scene sceneID="VzY-gA-eOY">
             <objects>
-                <viewController id="gBY-2c-tb6" userLabel="History View Controller" sceneMemberID="viewController">
+                <viewController id="gBY-2c-tb6" userLabel="History View Controller" customClass="HistoryViewController" customModule="TrainCamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vJi-aS-O1h">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,6 +320,7 @@ choose exercises from each set:</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back"/>
                                 <connections>
+                                    <action selector="backBtn:" destination="uNr-4d-cag" eventType="touchUpInside" id="Eqk-oc-D6H"/>
                                     <action selector="clickBackBtn:" destination="7gB-yx-JyX" eventType="touchUpInside" id="b5i-2f-zGk"/>
                                 </connections>
                             </button>
@@ -332,14 +341,17 @@ choose exercises from each set:</string>
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRg-3m-6Rs">
-                                                    <rect key="frame" x="154" y="11.333333969116211" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRg-3m-6Rs">
+                                                    <rect key="frame" x="154" y="11.333333333333336" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gRg-3m-6Rs" firstAttribute="centerX" secondItem="lGM-Wg-GdW" secondAttribute="centerX" id="sTF-0F-Dh7"/>
+                                                <constraint firstItem="gRg-3m-6Rs" firstAttribute="centerY" secondItem="lGM-Wg-GdW" secondAttribute="centerY" id="smK-po-ecC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="CustomCell_LBL_cell" destination="gRg-3m-6Rs" id="0k0-PF-ban"/>
@@ -362,8 +374,12 @@ choose exercises from each set:</string>
                             <constraint firstItem="LkG-U7-8cQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m5P-Tj-cZa" secondAttribute="trailing" constant="8" symbolic="YES" id="vsN-gN-a69"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="m5P-Tj-cZa" id="TwR-J4-THS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mR9-Zv-rdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uNr-4d-cag" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="603" y="766"/>
         </scene>
@@ -530,6 +546,11 @@ Label</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pauseBtn" destination="8eg-fH-ufv" id="6wR-dB-Az8"/>
+                        <outlet property="stopBtn" destination="9ig-es-xCC" id="NFL-CL-jaa"/>
+                        <outlet property="timer" destination="zIa-uE-sfi" id="oZh-RL-VCM"/>
+                        <outlet property="workoutImg" destination="Acs-S5-WRa" id="1gu-0q-nfc"/>
+                        <outlet property="workoutTitle" destination="oMa-3h-L6y" id="ae6-Gq-yjJ"/>
                         <segue destination="50c-cW-vrj" kind="presentation" identifier="WorkoutDone" modalPresentationStyle="fullScreen" id="eJU-ey-GeM"/>
                     </connections>
                 </viewController>
@@ -585,6 +606,10 @@ Label</string>
                             <constraint firstItem="GFc-bP-Wwd" firstAttribute="top" secondItem="I4f-zz-k2u" secondAttribute="top" constant="10" id="yMl-ZM-D6m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="homeBtn" destination="GFc-bP-Wwd" id="ILN-rq-CO5"/>
+                        <outlet property="workoutNum" destination="dya-xO-LjF" id="bGG-4P-kfT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qu-VM-DkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -592,15 +617,16 @@ Label</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ClG-0d-Cay"/>
-        <segue reference="cnB-9v-SuS"/>
+        <segue reference="aEP-KC-LcV"/>
+        <segue reference="u00-AR-TZX"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="fitness (1)" width="128" height="128"/>
+        <image name="history1" width="35" height="35"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="note.text" catalog="system" width="128" height="106"/>
-        <image name="tablecells" catalog="system" width="128" height="93"/>
+        <image name="rank1" width="35" height="35"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -618,6 +644,9 @@ Label</string>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     
     
     func navigateToSetsView(){
-        print("HERE!!")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let setsViewController = storyBoard.instantiateViewController(withIdentifier: "SetsViewController") as! SetsViewController
         self.present(setsViewController, animated:true, completion:nil)

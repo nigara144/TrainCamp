@@ -10,6 +10,11 @@ import UIKit
 
 class WorkoutViewController: UIViewController {
     
+    @IBOutlet weak var pauseBtn: UIButton!
+    @IBOutlet weak var stopBtn: UIButton!
+    @IBOutlet weak var workoutTitle: UILabel!
+    @IBOutlet weak var workoutImg: UIImageView!
+    @IBOutlet weak var timer: UILabel!
     
     
     

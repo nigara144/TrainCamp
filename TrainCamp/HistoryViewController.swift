@@ -1,5 +1,5 @@
 //
-//  DoneViewController.swift
+//  HistoryViewController.swift
 //  TrainCamp
 //
 //  Created by mac on 18/06/2022.
@@ -8,14 +8,15 @@
 import Foundation
 import UIKit
 
-class DoneViewController: UIViewController {
+class HistoryViewController: UIViewController {
     
+    @IBOutlet weak var backBtn: UIButton!
     
-    @IBOutlet weak var homeBtn: UIButton!
-    @IBOutlet weak var workoutNum: UILabel!
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
+    
