@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
 
 class PlanViewController: UIViewController {
     
@@ -15,9 +16,20 @@ class PlanViewController: UIViewController {
     @IBOutlet weak var textPlan: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
+    var titleP: String?
+    let database = Firestore.firestore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInfo()
+        print(plans)
+
+    }
+    
+    func setInfo() {
+        planTitle.text = titleP
+    
     }
     
     @IBAction func clickBackBtn(_ sender: Any) {
@@ -26,6 +38,7 @@ class PlanViewController: UIViewController {
     
     
     @IBAction func clickStartBtn(_ sender: Any) {
+        
     }
     
 }
