@@ -549,7 +549,7 @@ Label</string>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7gB-yx-JyX" kind="presentation" identifier="StopWorkout" modalPresentationStyle="fullScreen" id="ClG-0d-Cay"/>
+                                    <segue destination="tqu-d7-XKg" kind="presentation" identifier="stopWorkout" modalPresentationStyle="fullScreen" id="IqJ-Ix-UWR"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-wI-dxJ">
@@ -605,7 +605,7 @@ Label</string>
                     <connections>
                         <outlet property="pauseBtn" destination="8eg-fH-ufv" id="6wR-dB-Az8"/>
                         <outlet property="stopBtn" destination="9ig-es-xCC" id="NFL-CL-jaa"/>
-                        <outlet property="timer" destination="zIa-uE-sfi" id="oZh-RL-VCM"/>
+                        <outlet property="timerLabel" destination="zIa-uE-sfi" id="T0D-WO-DC5"/>
                         <outlet property="workoutImg" destination="Acs-S5-WRa" id="1gu-0q-nfc"/>
                         <outlet property="workoutTitle" destination="oMa-3h-L6y" id="ae6-Gq-yjJ"/>
                         <segue destination="50c-cW-vrj" kind="presentation" identifier="WorkoutDone" modalPresentationStyle="fullScreen" id="eJU-ey-GeM"/>
@@ -675,7 +675,7 @@ Label</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XeV-hn-8At"/>
-        <segue reference="u00-AR-TZX"/>
+        <segue reference="IqJ-Ix-UWR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>

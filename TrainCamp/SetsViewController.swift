@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseFirestore
+
 
 var plans = [Plan]()
 
@@ -22,12 +24,58 @@ class SetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        plans = FirebaseHelper.getAllPlans()
-//        print(plans)
+    
+        Firestore.firestore().collection("Plans").order(by: "Title").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let plan = Plan()
+                    let data = document.data()
+                    plan.title = (data["Title"] as? String)
+                    document.reference.collection("Exercises").getDocuments() {
+                        (querySnapshot, err) in
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                            } else {
+                                for document in querySnapshot!.documents {
+                                    print("\(document.documentID) => \(document.data())")
+                                    let exercise = Exercise()
+                                    let dataEx = document.data()
+                                    exercise.img = (dataEx["img"] as? String)
+                                    exercise.name = (dataEx["name"] as? String)
+                                    exercise.rounds = (dataEx["rounds"] as? Int)
+                                    exercise.mul = (dataEx["mul"] as? Int)
+                                    plan.exercises.append(exercise)
+                                }
+                                plans.append(plan)
+                            }
+                    }
+                }
+            
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(plans.isEmpty){
+            let loader = self.loader()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.stopLoader(loader: loader)
+            }
+        }
+        
     }
     
     
+    
+    
+    
+    
+    
     @IBAction func choosePlan(_ sender: UIButton) {
+        
         if(sender.tag == 1){
             performSegue(withIdentifier: "Plan_A", sender: self)
             print("Plan_A")
@@ -71,6 +119,26 @@ class SetsViewController: UIViewController {
     
     
     
+}
+
+extension UIViewController {
+    func loader() -> UIAlertController {
+        let alert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
+        
+        let indicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        indicator.hidesWhenStopped = true
+        indicator.startAnimating()
+        indicator.style = .large
+        alert.view.addSubview(indicator)
+        present(alert, animated: true, completion: nil)
+        return alert
+    }
+    
+    func stopLoader(loader: UIAlertController) {
+        DispatchQueue.main.async {
+            loader.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 
 
