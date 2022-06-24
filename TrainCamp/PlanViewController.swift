@@ -39,7 +39,7 @@ class PlanViewController: UIViewController {
         let currentExercises = currentPlan?.exercises ?? []
         for exercise in currentExercises {
             i = i + 1
-            str = str + "\(exercise.name ?? "Exercise \(i)")  :  \(String(exercise.rounds)) x \(String(exercise.mul)) \n"
+            str = str + "\(exercise.name ?? "Exercise \(i)")  :  \(String(exercise.rounds)) set\n"
         }
         textPlan.text = str
         print(str)

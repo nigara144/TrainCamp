@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signUp: UIButton!
+    @IBOutlet weak var userAlreadyExistsMsg: UILabel!
     
     
     func navigateToSetsView(){
@@ -27,6 +29,7 @@ class LoginViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+            
         Auth.auth().addStateDidChangeListener() { auth, user in
                 if user != nil {
                     self.performSegue(withIdentifier: "UserLoggedIn", sender: nil)
@@ -125,13 +128,33 @@ class LoginViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if(error != nil) {
                 print("User create - FAILED")
+//                print(error)
+                if((error! as NSError).code == 17007){
+                    self.userAlreadyExistsMsg.isHidden = false
+
+                }
                 return
             }
             print("User created!")
+            self.userSave(email: email, uuid: authResult!.user.uid)
             self.navigateToSetsView()
         }
     
     }
+    
+    func userSave(email: String, uuid: String) {
+        let data = ["email": email, "rank" : 0] as [String : Any]
+        FirebaseFirestore.Firestore.firestore().collection("Users").document(uuid).setData(data) { error in
+            if error != nil {
+                print("User save: FAILED")
+            }
+            else {
+                print("User save: SUCCESS")
+            }
+        }
+    }
+    
+    
     
     
 }

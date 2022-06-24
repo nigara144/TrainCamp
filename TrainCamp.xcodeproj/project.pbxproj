@@ -11,7 +11,6 @@
 		04BF1B9F285E07B20049333A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1B9E285E07B20049333A /* PlanViewController.swift */; };
 		04BF1BA1285E15CA0049333A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */; };
 		04BF1BA3285E19B50049333A /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1BA2285E19B50049333A /* DoneViewController.swift */; };
-		04BF1BA5285E1DA20049333A /* CustomUI in Resources */ = {isa = PBXBuildFile; fileRef = 04BF1BA4285E1DA20049333A /* CustomUI */; };
 		04BF1BA9285E29E70049333A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF1BA8285E29E70049333A /* HistoryViewController.swift */; };
 		04D6C70C28605EF70043CA9C /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 04D6C70B28605EF70043CA9C /* Models */; };
 		04D6C70E28608E790043CA9C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C70D28608E790043CA9C /* Repository.swift */; };
@@ -19,6 +18,10 @@
 		04D6C7142860CF210043CA9C /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C7132860CF210043CA9C /* Plan.swift */; };
 		04D6C7162860CFD10043CA9C /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C7152860CFD10043CA9C /* FirebaseHelper.swift */; };
 		04D6C7182860D5F50043CA9C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C7172860D5F50043CA9C /* Exercise.swift */; };
+		04D6C71A2864C91C0043CA9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C7192864C91C0043CA9C /* User.swift */; };
+		04D6C71C2865DB9E0043CA9C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C71B2865DB9E0043CA9C /* History.swift */; };
+		04D6C71E2865EA730043CA9C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C71D2865EA730043CA9C /* CustomCell.swift */; };
+		04D6C7202865F5210043CA9C /* CustomCellRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6C71F2865F5210043CA9C /* CustomCellRank.swift */; };
 		0B43ECE908E6C7066E402EFE /* Pods_TrainCampTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E78ACE1E6E7372A029F578E /* Pods_TrainCampTests.framework */; };
 		310D466E5D287C09480EAE2B /* Pods_TrainCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4901FCD1D8EA0A17E194F2CE /* Pods_TrainCamp.framework */; };
 		7715B1AD2850A18C00DD330B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1AC2850A18C00DD330B /* AppDelegate.swift */; };
@@ -32,7 +35,6 @@
 		7715B1D02850A18C00DD330B /* TrainCampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1CF2850A18C00DD330B /* TrainCampUITestsLaunchTests.swift */; };
 		7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715B1DC2850A6DA00DD330B /* LoginViewController.swift */; };
 		775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775F12FC285363B4006F1E22 /* GoogleService-Info.plist */; };
-		CA2B8F732853760A00164286 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B8F722853760A00164286 /* RegisterViewController.swift */; };
 		DF722C190288CB6823E40552 /* Pods_TrainCamp_TrainCampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318629AA0A1564ACF197C27B /* Pods_TrainCamp_TrainCampUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +60,6 @@
 		04BF1B9E285E07B20049333A /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		04BF1BA2285E19B50049333A /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
-		04BF1BA4285E1DA20049333A /* CustomUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CustomUI; sourceTree = "<group>"; };
 		04BF1BA8285E29E70049333A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		04D6C70B28605EF70043CA9C /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		04D6C70D28608E790043CA9C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -66,6 +67,10 @@
 		04D6C7132860CF210043CA9C /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		04D6C7152860CFD10043CA9C /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		04D6C7172860D5F50043CA9C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		04D6C7192864C91C0043CA9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04D6C71B2865DB9E0043CA9C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		04D6C71D2865EA730043CA9C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		04D6C71F2865F5210043CA9C /* CustomCellRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellRank.swift; sourceTree = "<group>"; };
 		11277E67E29D85D0DE9C0125 /* Pods-TrainCamp-TrainCampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCamp-TrainCampUITests.release.xcconfig"; path = "Target Support Files/Pods-TrainCamp-TrainCampUITests/Pods-TrainCamp-TrainCampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1E78ACE1E6E7372A029F578E /* Pods_TrainCampTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainCampTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BE7122A555E78AD28BCDA4 /* Pods-TrainCampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCampTests.debug.xcconfig"; path = "Target Support Files/Pods-TrainCampTests/Pods-TrainCampTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 		7715B1DC2850A6DA00DD330B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		775F12FC285363B4006F1E22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8BA058D7C7380F583E68E26 /* Pods-TrainCamp-TrainCampUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrainCamp-TrainCampUITests/Pods-TrainCamp-TrainCampUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CA2B8F722853760A00164286 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F574CC297BCB7C092DDABA44 /* Pods-TrainCampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainCampTests.release.xcconfig"; path = "Target Support Files/Pods-TrainCampTests/Pods-TrainCampTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				04D6C70B28605EF70043CA9C /* Models */,
-				04BF1BA4285E1DA20049333A /* CustomUI */,
 				775F12FC285363B4006F1E22 /* GoogleService-Info.plist */,
 				7715B1AC2850A18C00DD330B /* AppDelegate.swift */,
 				7715B1AE2850A18C00DD330B /* SceneDelegate.swift */,
@@ -180,7 +183,6 @@
 				7715B1B72850A18C00DD330B /* LaunchScreen.storyboard */,
 				7715B1BA2850A18C00DD330B /* Info.plist */,
 				7715B1DC2850A6DA00DD330B /* LoginViewController.swift */,
-				CA2B8F722853760A00164286 /* RegisterViewController.swift */,
 				04BF1B9C285DD2380049333A /* SetsViewController.swift */,
 				04BF1B9E285E07B20049333A /* PlanViewController.swift */,
 				04BF1BA0285E15CA0049333A /* WorkoutViewController.swift */,
@@ -191,6 +193,10 @@
 				04D6C7132860CF210043CA9C /* Plan.swift */,
 				04D6C7152860CFD10043CA9C /* FirebaseHelper.swift */,
 				04D6C7172860D5F50043CA9C /* Exercise.swift */,
+				04D6C7192864C91C0043CA9C /* User.swift */,
+				04D6C71B2865DB9E0043CA9C /* History.swift */,
+				04D6C71D2865EA730043CA9C /* CustomCell.swift */,
+				04D6C71F2865F5210043CA9C /* CustomCellRank.swift */,
 			);
 			path = TrainCamp;
 			sourceTree = "<group>";
@@ -325,7 +331,6 @@
 				7715B1B92850A18C00DD330B /* LaunchScreen.storyboard in Resources */,
 				775F12FD285363B4006F1E22 /* GoogleService-Info.plist in Resources */,
 				7715B1B62850A18C00DD330B /* Assets.xcassets in Resources */,
-				04BF1BA5285E1DA20049333A /* CustomUI in Resources */,
 				7715B1B42850A18C00DD330B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,14 +461,17 @@
 			files = (
 				04D6C7162860CFD10043CA9C /* FirebaseHelper.swift in Sources */,
 				04BF1BA1285E15CA0049333A /* WorkoutViewController.swift in Sources */,
+				04D6C71E2865EA730043CA9C /* CustomCell.swift in Sources */,
 				7715B1DD2850A6DA00DD330B /* LoginViewController.swift in Sources */,
 				04D6C7122860A0080043CA9C /* RankViewController.swift in Sources */,
+				04D6C71A2864C91C0043CA9C /* User.swift in Sources */,
+				04D6C7202865F5210043CA9C /* CustomCellRank.swift in Sources */,
 				04BF1B9D285DD2390049333A /* SetsViewController.swift in Sources */,
 				04D6C7182860D5F50043CA9C /* Exercise.swift in Sources */,
 				04D6C7142860CF210043CA9C /* Plan.swift in Sources */,
 				04BF1BA9285E29E70049333A /* HistoryViewController.swift in Sources */,
-				CA2B8F732853760A00164286 /* RegisterViewController.swift in Sources */,
 				04D6C70E28608E790043CA9C /* Repository.swift in Sources */,
+				04D6C71C2865DB9E0043CA9C /* History.swift in Sources */,
 				04BF1B9F285E07B20049333A /* PlanViewController.swift in Sources */,
 				7715B1B12850A18C00DD330B /* ViewController.swift in Sources */,
 				7715B1AD2850A18C00DD330B /* AppDelegate.swift in Sources */,

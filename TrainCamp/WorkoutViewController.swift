@@ -23,6 +23,7 @@ class WorkoutViewController: UIViewController {
     var countOfExercises: Int = 0
     var rest: Bool = true
     var currentExercises: [Exercise] = []
+    var isPaused: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,26 @@ class WorkoutViewController: UIViewController {
         
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+    }
+    
+    
+    
+    @IBAction func clickOnStop(_ sender: Any) {
+        timer?.invalidate()
+    }
+    
+    
+    @IBAction func clickOnPauseAndResume(_ sender: Any) {
+        if(!isPaused){
+            pauseBtn.setTitle("Resume", for: .normal)
+            timer?.invalidate()
+            isPaused = true
+        }else{
+            isPaused = false
+            pauseBtn.setTitle("Pause", for: .normal)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        }
+        
     }
     
     @objc func fireTimer() {
@@ -82,7 +103,16 @@ class WorkoutViewController: UIViewController {
             workoutImg?.load(url: url)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "WorkoutDone") {
+            let doneView = segue.destination as! DoneViewController
+            doneView.titleP = titleP
+        }
+    }
 }
+
+
 
 extension UIImageView {
     func load(url: URL, onLoadCompletion: ((_ isImageLoaded: Bool) -> Void)? = nil) {
