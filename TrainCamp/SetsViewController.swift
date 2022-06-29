@@ -73,31 +73,31 @@ class SetsViewController: UIViewController {
     
     
     func fetchUser() {
-        if(userModel.email == ""){
-        let userUID = Auth.auth().currentUser?.uid
-        Firestore.firestore().collection("Users").document(userUID!).getDocument { snapshot, error in
-            if error != nil {
-                print("ERROR: in Fetch User Data")
-            }
-            else {
-                print("SUCCESS: Fetch User Data")
-                userModel.email = snapshot?.get("email") as? String ?? Auth.auth().currentUser?.email
-                userModel.rank = snapshot?.get("rank") as? Int ?? 0
-                
-                snapshot?.reference.collection("History").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting history documents: \(err)")
-                        userModel.workoutHistory = []
-                    } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                            userModel.workoutHistory.append(History(planName: document.get("planName") as! String, date: document.get("date") as! Timestamp))
+        if(userModel.email != ""){
+            let userUID = Auth.auth().currentUser?.uid
+            Firestore.firestore().collection("Users").document(userUID!).getDocument { snapshot, error in
+                if error != nil {
+                    print("ERROR: in Fetch User Data")
+                }
+                else {
+                    print("SUCCESS: Fetch User Data")
+                    userModel.email = snapshot?.get("email") as? String ?? Auth.auth().currentUser?.email
+                    userModel.rank = snapshot?.get("rank") as? Int ?? 0
+                    
+                    snapshot?.reference.collection("History").getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting history documents: \(err)")
+                            userModel.workoutHistory = []
+                        } else {
+                            for document in querySnapshot!.documents {
+                                print("\(document.documentID) => \(document.data())")
+                                userModel.workoutHistory.append(History(planName: document.get("planName") as! String, date: document.get("date") as! Timestamp))
+                            }
                         }
                     }
+                    print("USER DATA: \(userModel.email), \(userModel.rank), \(userModel.workoutHistory.count)")
                 }
-                print("USER DATA: \(userModel.email), \(userModel.rank), \(userModel.workoutHistory.count)")
             }
-        }
         }
     }
     
